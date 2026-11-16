@@ -1,0 +1,179 @@
+popular_castigo:
+  excel_dir: "Y:/Coordinador/RECUPERADO/BANCO POPULAR/2026/NOVIEMBRE/FTP/13/BP_SYNERJOY.xlsx"
+  allowed_tables:
+    - "client"
+    - "account"
+    - "demografic"
+  sheet_name:
+    name: "sheet1"
+    role : "master"
+    key_join:
+      - "CEDULA"
+    columns:
+      - source: "FEC_PROCESO"
+        target:
+          name: "date_assigment"
+          name_table: 'client'
+          dtype: "date"
+        parse:
+          format: "%d/%m/%Y"
+      - source: "CEDULA"
+        target:
+          name: "document_number"
+          name_table: 'client'
+          dtype: "str"
+      - source: "NUM_CUENTA"
+        target:
+          name: "account_number"
+          name_table: 'account'
+          dtype: "str"
+      - source: "NOMBRE"
+        target:
+          name: "full_name"
+          name_table: 'client'
+          dtype: "str"
+      - source: "FEC_CUMPLE"
+        target:
+          name: "date_1"
+          name_table: 'client'
+          dtype: "date"
+        parse:
+          format: "%d/%m/%Y"
+      - source: "DIA_CORTE"
+        target:
+          name: "number_1"
+          name_table: 'client'
+          dtype: "int"
+      - source: "FEC_ASIGNACION"
+        target:
+          name: "date_2"
+          name_table: 'client'
+          dtype: "date"
+        parse:
+          format: "%d/%m/%Y"
+      - source: "FEC_DESEMBOLSO"
+        target:
+          name: "date_3"
+          name_table: 'client'
+          dtype: "date"
+        parse:
+          format: "%d/%m/%Y"
+      - source: "CIUDAD"
+        target:
+          name: "adress_1"
+          name_table: 'demografic'
+          dtype: "str"
+      - source: "SALDO_TOTAL"
+        target:
+          name: "value_1"
+          name_table: 'account'
+          dtype: "float"
+      - source: "SALDO_CAPITAL"
+        target:
+          name: "value_2"
+          name_table: 'account'
+          dtype: "float"
+      - source: "FEC_ULT_PAGO"
+        target:
+          name: "date_1"
+          name_table: 'account'
+          dtype: "date"
+        parse:
+          format: "%d/%m/%Y"
+      - source: "CASA_ACTUAL"
+        target:
+          name: "text_4"
+          name_table: 'client'
+          dtype: "str"
+      - source: "ESTRATEGIA_ACTUAL"
+        target:
+          name: "text_2"
+          name_table: 'account'
+          dtype: "str"
+      - source: "WAS_IS_FINAL"
+        target:
+          name: "text_3"
+          name_table: 'client'
+          dtype: "str"
+      - source: "DIAS_MORA_ACTUAL"
+        target:
+          name: "number_2"
+          name_table: 'client'
+          dtype: "int"
+      - source: "SALDO_INICIAL_ACTUAL"
+        target:
+          name: "value_3"
+          name_table: 'account'
+          dtype: "float"
+      - source: "SALDO_TOTAL_ACTUAL"
+        target:
+          name: "value_4"
+          name_table: 'account'
+          dtype: "float"
+      - source: "SALDO_CAPITAL_ACTUAL"
+        target:
+          name: "value_5"
+          name_table: 'account'
+          dtype: "float"
+      - source: "SALDO_CAPITAL_VENCIDO_ACTUAL"
+        target:
+          name: "value_6"
+          name_table: 'account'
+          dtype: "float"
+      - source: "SALDO_EN_MORA_ACTUAL"
+        target:
+          name: "value_7"
+          name_table: 'account'
+          dtype: "float"
+      - source: "PAGO_MINIMO_ACTUAL"
+        target:
+          name: "value_8"
+          name_table: 'account'
+          dtype: "float"
+      - source: "VALOR_CUOTA_ACTUAL"
+        target:
+          name: "value_9"
+          name_table: 'account'
+          dtype: "float"
+      - source: "TIPO_PRODUCTO"
+        target:
+          name: "text_2"
+          name_table: 'client'
+          dtype: "str"
+      - source: "GAC"
+        target:
+          name: "value_10"
+          name_table: 'account'
+          dtype: "str"
+      - source: "CONTACTO"
+        target:
+          name: "text_5"
+          name_table: 'client'
+          dtype: "str"
+      - source: "FEC_ULT_CONTACTO_ACT"
+        target:
+          name: "date_4"
+          name_table: 'client'
+          dtype: "date"
+        parse:
+          format: "%d/%m/%Y"
+      - source: "TIPO_PROCESO"
+        target:
+          name: "text_1"
+          name_table: 'account'
+          dtype: "str"
+      - source: "FECHA_ENTRADA_ETAPA"
+        target:
+          name: "date_3"
+          name_table: 'account'
+          dtype: "date"
+        parse:
+          format: "%d/%m/%Y"
+      - source: "TIPO_CLIENTE"
+        target:
+          name: "text_6"
+          name_table: 'client'
+          dtype: "str"
+
+
+      

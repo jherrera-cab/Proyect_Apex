@@ -1,0 +1,6 @@
+environment: development
+logging:
+  level: "INFO"
+  log_file: "logs/pipeline.log"
+  rotation: "1 day"
+  retention: "5 days"
